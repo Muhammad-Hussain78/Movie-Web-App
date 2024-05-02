@@ -1,0 +1,223 @@
+/* CSS Reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+/* Navbar */
+
+nav {
+    background: #232f3e;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px;
+}
+
+.search-container input, button {
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-container input {
+    border-radius: 3px 0 0 3px;
+}
+
+.search-container button {
+    border-radius: 0 3px 3px 0;
+    background: #f5c518;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.search-container button:hover {
+    background: #ffdd45;
+}
+
+/* Main Section */
+
+main {
+    max-width: 1200px;
+    margin: 38px auto;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+main section .movie-container h2 {
+    text-align: center;
+    padding-inline: 10px;
+    line-height: 35px;
+}
+
+.movie-container {
+    display: flex;
+    background: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 5px;
+}
+
+.movie-poster img {
+    height: 455px;
+    margin-right: 30px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.movie-info {
+    padding-inline: 15px;
+    margin-bottom: 20px;
+}
+
+.movie-info h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0px 12px 0px;
+}
+
+.movie-info h2 + p {
+    text-align: center;
+}
+
+.movie-genre {
+    display: flex;
+    justify-content: center;
+    margin-block: 5px;
+}
+
+.movie-genre div{
+    background: #232f3e;
+    color: #fff;
+    padding: 5px 14px;
+    margin-inline: 5px;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.movie-info p{
+    font-size: 18px;
+    margin-block: 16px;
+    line-height: 24px;
+}
+
+.watch-movie-container {
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+}
+
+.watch-movie {
+    background: #ff0000;
+    font-size: 20px;
+    padding: 10px 22px;
+    margin-inline: 5px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.watch-movie a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.no-background {
+    background: none;
+    box-shadow: none;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background: #232f3e;
+    color: #fff;
+    padding-block: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Responsive Code */
+@media screen and (max-width: 950px){
+    .movie-container {
+        flex-direction: column;
+    }
+    
+    .movie-poster img {
+        width: 100%;
+        height: fit-content;
+        margin-right: 0;
+    }
+
+    .movie-info {
+        padding-inline: 30px;
+    }
+
+    .watch-movie-container {
+        justify-content: center;
+    }
+
+    footer {
+        padding-inline: 30px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 630px){
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .navbar {
+        padding-inline: 10px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .inputBox {
+        margin-bottom: 10px;
+    }
+
+    .movie-genre {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .movie-genre div {
+        margin-bottom: 15px;
+    }
+}   
